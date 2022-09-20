@@ -16,8 +16,16 @@ public class FizzBuzzAugusto {
     //terceira regra: se o numero divisivel por 3 e por 5 retorna fizzbuzz
     //quarta regra: se o numero nao é divisivel por nenhum deles retorna o numero recebido
     @GetMapping
-    public String executa(@PathVariable("numero") Integer numero){
-        return String.valueOf(numero);
-    }
+    public String executa(@PathVariable("numero") Integer numero) {
+        StringBuilder sb = new StringBuilder();
 
+        if (numero % 3 == 0) {
+            sb.append("Fizz");
+        }
+        if (numero % 5 == 0) {
+            sb.append("Buzz");
+        }
+
+        return sb.toString();
+    }
 }
