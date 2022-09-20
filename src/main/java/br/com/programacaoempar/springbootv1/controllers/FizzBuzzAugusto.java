@@ -18,14 +18,15 @@ public class FizzBuzzAugusto {
     @GetMapping
     public String executa(@PathVariable("numero") Integer numero) {
         StringBuilder sb = new StringBuilder();
-
         if (numero % 3 == 0) {
             sb.append("Fizz");
         }
         if (numero % 5 == 0) {
             sb.append("Buzz");
         }
-
+        if (!sb.toString().contains("zz")) {
+            return String.valueOf(numero);
+        }
         return sb.toString();
     }
 }
