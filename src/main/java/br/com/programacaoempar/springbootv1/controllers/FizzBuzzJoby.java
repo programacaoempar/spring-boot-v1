@@ -26,6 +26,8 @@ public class FizzBuzzJoby {
             div.append("Fizz");
         }if (numero % 5 == 0){
             div.append("Buzz");
+        }if (numero % 3 != 0 && numero % 5 != 0 ){
+            div.append("" + numero +"");
         }
         return div.toString();
     }
